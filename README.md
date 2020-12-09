@@ -92,6 +92,12 @@ export CLOUDFLARE_ZONES="example.com,example.org"
 
 Not at the moment, as I require an Enterprise account for development and I don't have one. Feel free to contribute that feature!
 
+#### Does it support Cloudflare [Web Analytics](https://blog.cloudflare.com/privacy-first-web-analytics/)?
+
+I finished writing `cloudflare_exporter` exactly 1 day before [Cloudflare announced their Web Analytics service is now available for free](https://blog.cloudflare.com/privacy-first-web-analytics/).
+
+That said, I'd love to include support for that. Once the API and the [Go API client library](https://godoc.org/github.com/prometheus/client_golang/prometheus) support it, I will integrate that into `cloudflare_exporter`. Last I checked (Dec 9th, 2020) neither support Web Analytics yet.
+
 #### What will happen when Cloudflare deprecates their Analytics REST API on March 1st, 2021?
 
 I expect Cloudflare to update their [official Go API client library](https://godoc.org/github.com/prometheus/client_golang/prometheus) to support the new [Analytics GraphQL API](https://developers.cloudflare.com/analytics/graphql-api) before deprecation on March 1st, 2020.
@@ -108,6 +114,7 @@ At this stage, development for `cloudflare_exporter` is paused with the followin
 
 Basically, any usage analytics data that Cloudflare offers over their APIs, including:
 * [Cloudflare DNS](https://www.cloudflare.com/dns/) analytics
+* [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/)
 * [Cloudflare Argo](https://www.cloudflare.com/products/argo-smart-routing/) analytics
 * Cloudflare Site Analytics [by colocation](https://api.cloudflare.com/#zone-analytics-analytics-by-co-locations)
 * [Cloudflare WAF](https://www.cloudflare.com/waf/) analytics
