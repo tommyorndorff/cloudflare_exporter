@@ -30,14 +30,8 @@ Available on [Docker Hub](https://hub.docker.com) as [`docker.io/ricardbejarano/
 
 - [`1.0`, `latest` *(Dockerfile)*](exporter/Dockerfile) (about `13.7MB`)
 
-Also available on [Quay](https://quay.io) as [`quay.io/ricardbejarano/cloudflare_exporter`](https://quay.io/repository/ricardbejarano/cloudflare_exporter):
-
-- [`1.0`, `latest` *(Dockerfile)*](exporter/Dockerfile) (about `13.7MB`)
-
-Any of both registries will do, example:
-
 ```bash
-docker run -it -p 9199:9199 -e CLOUDFLARE_TOKEN="***" -e CLOUDFLARE_ZONES="example.com,example.org" quay.io/ricardbejarano/cloudflare_exporter
+docker run -it -p 9199:9199 -e CLOUDFLARE_TOKEN="***" -e CLOUDFLARE_ZONES="example.com,example.org" docker.io/ricardbejarano/cloudflare_exporter
 ```
 
 ### Building the container image from source
